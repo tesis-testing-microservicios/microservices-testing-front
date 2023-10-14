@@ -2,12 +2,18 @@ import React from 'react';
 import {
   Box,
   Container,
+  Container,
   Text,
   Heading,
   ChakraProvider,
   Flex,
   HStack,
+  Heading,
+  ChakraProvider,
+  Flex,
+  HStack,
 } from '@chakra-ui/react';
+import { Navbar } from './features/navbar/navbar';
 import { Navbar } from './features/navbar/navbar';
 
 function App() {
