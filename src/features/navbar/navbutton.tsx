@@ -1,23 +1,15 @@
-import { Button, ButtonProps, HStack, Icon, Text } from '@chakra-ui/react';
-import { IconName } from '@fortawesome/fontawesome-common-types';
+import { Button, ButtonProps, Text, chakra } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export type NavButtonProps = {
-  icon: IconName;
   label: string;
 } & ButtonProps;
 
-export const NavButton: React.FC<NavButtonProps> = ({
-  icon,
-  label,
-  ...props
-}) => {
+export const NavButton: React.FC<NavButtonProps> = ({ label, ...props }) => {
+  const Icon = chakra(FontAwesomeIcon);
   return (
     <Button justifyContent="start" {...props}>
-      <HStack spacing="3">
-        <Icon as={FontAwesomeIcon} icon={icon} boxSize="6" />
-        <Text>{label}</Text>
-      </HStack>
+      <Text>{label}</Text>
     </Button>
   );
 };
