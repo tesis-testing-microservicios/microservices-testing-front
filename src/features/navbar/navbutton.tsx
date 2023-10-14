@@ -1,11 +1,4 @@
-import {
-  Button,
-  ButtonProps,
-  HStack,
-  Icon,
-  Text,
-  chakra,
-} from '@chakra-ui/react';
+import { Button, ButtonProps, Text, chakra } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export type NavButtonProps = {
