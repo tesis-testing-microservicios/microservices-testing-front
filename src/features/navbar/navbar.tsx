@@ -26,16 +26,16 @@ export const Navbar = () => {
         <Stack justify="space-between" spacing="1" width="full">
           <Stack spacing="8" shouldWrapChildren>
             <Stack spacing="1">
-              <NavButton label="Home" icon={FiHome} />
+              <NavButton label="Home" icon="home" />
             </Stack>
             <Stack>
               <Text textStyle="sm" color="fg.subtle" fontWeight="medium">
                 Componentes
               </Text>
               <Stack spacing="1">
-                <NavButton label="Patrones" icon={FiCpu} />
-                <NavButton label="Implementaciones" icon={FiCast} />
-                <NavButton label="Reportes" icon={FiPieChart} />
+                <NavButton label="Patrones" icon="computer" />
+                <NavButton label="Implementaciones" icon="cash-register" />
+                <NavButton label="Reportes" icon="chart-bar" />
               </Stack>
             </Stack>
             <Stack>
@@ -43,9 +43,9 @@ export const Navbar = () => {
                 Social
               </Text>
               <Stack spacing="1">
-                <NavButton label="Twitter" icon={FiTwitter} />
-                <NavButton label="Instagram" icon={FiInstagram} />
-                <NavButton label="Linkedin" icon={FiLinkedin} />
+                <NavButton label="Twitter" icon="twitter" />
+                <NavButton label="Instagram" icon="instagram" />
+                <NavButton label="Linkedin" icon="linkedin" />
               </Stack>
             </Stack>
           </Stack>
