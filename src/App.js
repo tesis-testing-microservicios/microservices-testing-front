@@ -1,40 +1,34 @@
 import React from 'react';
 import {
-  ChakraProvider,
   Box,
+  Container,
   Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
+  Heading,
+  ChakraProvider,
+  Flex,
+  HStack,
 } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+import { Navbar } from './features/navbar/navbar';
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
+    <ChakraProvider>
+      <HStack>
+        <Box bgColor="gray.50">
+          <Navbar />
+        </Box>
+        <Flex h="100vh" flexGrow="1" bgColor="white">
+          <Container maxW="container.lg" py={10} flexGrow={1}>
+            <Heading as="h1" size="xl" mb={6}>
+              Welcome to My App
+            </Heading>
+            <Text fontSize="lg" mb={4}>
+              This is a simple example of how to add content to your app.
             </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
+            {/* Add more content components here */}
+          </Container>
+        </Flex>
+      </HStack>
     </ChakraProvider>
   );
 }
