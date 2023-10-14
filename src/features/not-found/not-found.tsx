@@ -1,12 +1,13 @@
+import React from 'react';
 import { Text, Center, Button } from '@chakra-ui/react';
-import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-export const NotFound = () => {
-  const [countdown, setCountdown] = useState(5);
+
+export const NotFound: React.FC = () => {
+  const [countdown, setCountdown] = React.useState<number>(5);
   const navigate = useNavigate();
 
   const redirectToHome = () => {
-    navigate("/")
+    navigate('/');
   };
 
   const updateCountdown = () => {
@@ -17,7 +18,7 @@ export const NotFound = () => {
     }
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     const countdownInterval = setInterval(updateCountdown, 1000);
 
     return () => {
@@ -30,11 +31,11 @@ export const NotFound = () => {
       <Text fontSize="6xl" fontWeight="bold">
         404
       </Text>
-      <Text fontSize="xl" fontWeight="semibold" mb={4}>
+      <Text fontSize="xl" fontWeight="semibold" mb="4">
         Página no encontrada
       </Text>
       <Link to="/">
-        <Text fontSize="xl" fontWeight="semibold" mb={4}>
+        <Text fontSize="xl" fontWeight="semibold" mb="4">
           Redirigiendo al inicio en {countdown} segundos...
         </Text>
       </Link>
