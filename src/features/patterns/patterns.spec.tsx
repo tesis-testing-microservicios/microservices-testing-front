@@ -1,0 +1,3 @@
+it('<Patterns />', () => {
+  // Fix me
+});
