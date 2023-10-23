@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Center, Button } from '@chakra-ui/react';
+import { Text, Center } from '@chakra-ui/react';
 import { Link, useNavigate } from 'react-router-dom';
 
 export const NotFound: React.FC = () => {

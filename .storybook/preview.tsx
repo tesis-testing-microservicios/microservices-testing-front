@@ -1,6 +1,8 @@
-import React from "react";
-import { MemoryRouter } from "react-router-dom";
+import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 /** @type { import('@storybook/react').Preview } */
 const preview = {
   parameters: {
@@ -15,7 +17,7 @@ const preview = {
 };
 
 export const decorators = [
-  (Story) => (
+  Story => (
     <MemoryRouter initialEntries={['/']}>
       <Story />
     </MemoryRouter>
