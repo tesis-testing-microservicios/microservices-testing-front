@@ -21,7 +21,7 @@ export const Navbar = () => {
             </Stack>
             <Stack>
               <Text textStyle="sm" color="fg.subtle" fontWeight="medium">
-                Componentes
+                Componentes test
               </Text>
               <Stack spacing="1">
                 <NavButton label="Patrones" to="/patrones" />
