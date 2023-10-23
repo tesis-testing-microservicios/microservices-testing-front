@@ -8,7 +8,6 @@ const config = {
     '@storybook/addon-onboarding',
     '@storybook/addon-interactions',
     '@storybook/addon-styling',
-    '@storybook/addon-jest',
     '@chakra-ui/storybook-addon',
     'storybook-rtl-addon',
   ],
