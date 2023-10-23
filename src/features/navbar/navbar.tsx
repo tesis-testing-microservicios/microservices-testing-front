@@ -2,7 +2,6 @@ import React from 'react';
 
 import { Flex, Stack, Text } from '@chakra-ui/react';
 import { NavButton } from './navbutton';
-import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
   return (
@@ -25,9 +24,9 @@ export const Navbar = () => {
                 Componentes
               </Text>
               <Stack spacing="1">
-                <NavButton label="Patrones" to="/patrones"/>
-                <NavButton label="Implementaciones" to="/implementaciones"/>
-                <NavButton label="Reportes" to="/reportes"/>
+                <NavButton label="Patrones" to="/patrones" />
+                <NavButton label="Implementaciones" to="/implementaciones" />
+                <NavButton label="Reportes" to="/reportes" />
                 <NavButton label="Test" to="/tests" />
               </Stack>
             </Stack>
