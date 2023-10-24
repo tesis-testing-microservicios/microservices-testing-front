@@ -1,6 +1,8 @@
 import { render as RTLRender, RenderOptions } from '@testing-library/react';
 import * as React from 'react';
 
+export * from '@testing-library/react';
+
 export const render = (
   ui: React.ReactElement,
   { ...options }: RenderOptions = {},

@@ -1,10 +1,10 @@
 import { StoryObj } from '@storybook/react';
-import { Navbar } from './navbar';
+import { Tests } from './tests';
 
 type Args = {};
 
 export default {
-  component: Navbar,
+  component: Tests,
 };
 
 type Story = StoryObj<Args>;
