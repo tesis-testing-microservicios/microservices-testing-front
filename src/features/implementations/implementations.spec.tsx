@@ -5,8 +5,13 @@ import * as RTL from '../../test/rtl';
 
 const { Default } = composeStories(stories);
 
-it('<Implementations />', () => {
-  RTL.render(<Default />);
+it('<Implementations />', async () => {
+  const { waitForFetchingToFinish } = RTL.renderStory(<Default />);
+
   RTL.screen.getByText('Implementaciones');
   RTL.screen.getByText(/Contenido de implementaciones/i);
+
+  // await waitForFetchingToFinish();
+
+  await RTL.screen.findByText('@process-street');
 });

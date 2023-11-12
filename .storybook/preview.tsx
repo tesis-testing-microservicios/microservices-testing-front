@@ -1,5 +1,8 @@
-import React from 'react';
-import { MemoryRouter } from 'react-router-dom';
+import { initialize, mswLoader } from 'msw-storybook-addon';
+import { MainDecorator } from './main-decorator';
+
+// Initialize MSW
+initialize({ onUnhandledRequest: 'bypass' });
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -14,14 +17,9 @@ const preview = {
       },
     },
   },
+  loaders: [mswLoader],
 };
 
-export const decorators = [
-  Story => (
-    <MemoryRouter initialEntries={['/']}>
-      <Story />
-    </MemoryRouter>
-  ),
-];
+export const decorators = [MainDecorator];
 
 export default preview;
