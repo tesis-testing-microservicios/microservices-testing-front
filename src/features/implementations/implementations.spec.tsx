@@ -11,7 +11,7 @@ it('<Implementations />', async () => {
   RTL.screen.getByText('Implementaciones');
   RTL.screen.getByText(/Contenido de implementaciones/i);
 
-  // await waitForFetchingToFinish();
+  await waitForFetchingToFinish();
 
-  await RTL.screen.findByText('@process-street');
+  RTL.screen.findByText('@process-street');
 });

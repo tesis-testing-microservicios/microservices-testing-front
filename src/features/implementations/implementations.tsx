@@ -3,17 +3,7 @@ import { Text, Heading, Box } from '@chakra-ui/react';
 import { GetGithubUserQuery } from './query-builder/get-github-user-query';
 
 export const Implementations: React.FC = () => {
-  console.log('chori');
-  const githubUserQuery = GetGithubUserQuery.useQuery(
-    {
-      userName: 'brunoravera',
-    },
-    {
-      onSuccess: () => console.log('aki2'),
-      onError: () => console.log('aki3'),
-      onSettled: () => console.log('aki4'),
-    },
-  );
+  const githubUserQuery = GetGithubUserQuery.useQuery({});
 
   return (
     <Box>

@@ -11,9 +11,13 @@ export function main(): void {
 export function getMSWService() {
   if (typeof window === 'undefined' || process.env.NODE_ENV === 'test') {
     const { server } = require('./server');
+    server.resetHandlers();
+    server.listen({ onUnhandledRequest: 'warn' });
     return server;
   } else {
     const { worker } = require('./browser');
+    worker.resetHandlers();
+    worker.start({ onUnhandledRequest: 'warn' });
     return worker;
   }
 }

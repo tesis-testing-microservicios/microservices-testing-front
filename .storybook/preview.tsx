@@ -1,8 +1,9 @@
-import { initialize, mswLoader } from 'msw-storybook-addon';
+import { getMSWService } from '../src/mocks';
 import { MainDecorator } from './main-decorator';
 
-// Initialize MSW
-initialize({ onUnhandledRequest: 'bypass' });
+const msw = getMSWService();
+
+msw.use();
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -17,7 +18,6 @@ const preview = {
       },
     },
   },
-  loaders: [mswLoader],
 };
 
 export const decorators = [MainDecorator];

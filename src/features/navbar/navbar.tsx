@@ -3,7 +3,7 @@ import React from 'react';
 import { Flex, Stack, Text } from '@chakra-ui/react';
 import { NavButton } from './navbutton';
 
-export const Navbar = () => {
+export const Navbar: React.FC = () => {
   return (
     <Flex as="section" minH="100vh" bg="bg.canvas">
       <Flex

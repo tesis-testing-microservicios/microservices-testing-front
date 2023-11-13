@@ -6,9 +6,9 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 
 export const queryClient = new QueryClient();
 
-export type Props = { queryClient?: QueryClient };
+export type AppProps = { queryClient?: QueryClient };
 
-export const App: React.FC<Props> = ({
+export const App: React.FC<AppProps> = ({
   queryClient: queryClientOverride = queryClient,
 }) => {
   return (

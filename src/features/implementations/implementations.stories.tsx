@@ -7,16 +7,17 @@ type Args = {};
 export default {
   component: Implementations,
   parameters: {
-    handlers: [
-      rest.get('*/users', (_req, res, ctx) => {
-        console.log('akiiiii');
-        return res(
-          ctx.json({
-            company: '@process-street',
-          }),
-        );
-      }),
-    ],
+    msw: (_args: unknown) => {
+      return [
+        rest.get('*/users', (_req, res, ctx) => {
+          return res(
+            ctx.json({
+              company: '@process-street',
+            }),
+          );
+        }),
+      ];
+    },
   },
 };
 
