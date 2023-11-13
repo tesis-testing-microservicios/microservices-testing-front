@@ -1,5 +1,9 @@
-import React from 'react';
-import { MemoryRouter } from 'react-router-dom';
+import { getMSWService } from '../src/mocks';
+import { MainDecorator } from './main-decorator';
+
+const msw = getMSWService();
+
+msw.use();
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -16,12 +20,6 @@ const preview = {
   },
 };
 
-export const decorators = [
-  Story => (
-    <MemoryRouter initialEntries={['/']}>
-      <Story />
-    </MemoryRouter>
-  ),
-];
+export const decorators = [MainDecorator];
 
 export default preview;
